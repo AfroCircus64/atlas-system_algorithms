@@ -3,12 +3,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * enum rb_color_e - Possible color of a Red-Black tree
  *
  * @RED: 0 -> Red node
  * @BLACK: 1 -> Black node
+ * @DOUBLE_BLACK: 2 -> Double black node (used in deletion balancing)
  */
 typedef enum rb_color_e
 {
@@ -38,5 +40,6 @@ typedef struct rb_tree_s
 
 /* Function prototypes */
 rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color);
+int rb_tree_is_valid(const rb_tree_t *tree);
 
 #endif /* RB_TREES_H */
