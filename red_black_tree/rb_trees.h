@@ -2,6 +2,7 @@
 #define RB_TREES_H
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * enum rb_color_e - Possible color of a Red-Black tree
