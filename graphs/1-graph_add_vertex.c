@@ -7,7 +7,7 @@
  *
  * Return: Pointer to the new vertex, or NULL on failure
  */
-vertex_t *graph_add_vertex(graph_t *graph, char *str)
+vertex_t *graph_add_vertex(graph_t *graph, const char *str)
 {
 	vertex_t *new_vertex, *temp;
 	char *str_copy;
@@ -25,7 +25,7 @@ vertex_t *graph_add_vertex(graph_t *graph, char *str)
 		temp = temp->next;
 	}
 
-	str_copy = strdup(str);
+	str_copy = strdup((char *)str);
 
 	if (!str_copy)
 	{
