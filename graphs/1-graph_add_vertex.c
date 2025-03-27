@@ -25,7 +25,7 @@ vertex_t *graph_add_vertex(graph_t *graph, const char *str)
 		temp = temp->next;
 	}
 
-	str_copy = strdup((char *)str);
+	str_copy = strdup(str);
 
 	if (!str_copy)
 	{

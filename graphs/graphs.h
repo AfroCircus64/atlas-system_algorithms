@@ -73,7 +73,7 @@ typedef struct graph_s
 
 /* Prototypes */
 graph_t *graph_create(void);
-vertex_t *graph_add_vertex(graph_t *graph, char *str);
+vertex_t *graph_add_vertex(graph_t *graph, const char *str);
 
 void graph_display(const graph_t *graph);
 
