@@ -36,9 +36,31 @@ typedef struct heap_s
 	binary_tree_node_t *root;
 } heap_t;
 
+/**
+ * struct queue_node_s - Queue node data structure
+ *
+ * @vertex: Pointer to a binary tree node
+ * @next: Pointer to the next queue node
+ */
+typedef struct queue_node_s
+{
+	binary_tree_node_t *vertex;
+	struct queue_node_s *next;
+} queue_node_t;
+
+
 /* FUNCTION PROTOTYPES */
 heap_t *heap_create(int (*data_cmp)(void *, void *));
 binary_tree_node_t *binary_tree_node(binary_tree_node_t *parent, void *data);
+binary_tree_node_t *heap_insert(heap_t *heap, void *data);
+void *heap_extract(heap_t *heap);
+void heap_delete(heap_t *heap, void (*free_data)(void *));
+
+/* HELPER FUNCTIONS */
+binary_tree_node_t *find_last_node(binary_tree_node_t *root, size_t size);
+void swap_nodes(binary_tree_node_t *node1, binary_tree_node_t *node2);
+int enqueue(queue_node_t **queue, binary_tree_node_t *node);
+queue_node_t *dequeue(queue_node_t **queue);
 
 
 #endif /* HEAP_H */
