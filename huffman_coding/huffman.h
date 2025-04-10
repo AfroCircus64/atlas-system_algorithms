@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* DATA STRUCTURES */
+
 /**
  * struct symbol_s - Stores a char and its associated frequency
  *
@@ -15,6 +17,11 @@ typedef struct symbol_s
 	char data;
 	size_t freq;
 } symbol_t;
+
+/* FUNCTION PROTOTYPES */
+
+symbol_t *symbol_create(char data, size_t freq);
+
 
 
 #endif /* HUFFMAN_H */
