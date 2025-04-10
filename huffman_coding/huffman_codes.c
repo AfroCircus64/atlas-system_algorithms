@@ -1,5 +1,7 @@
 #include "huffman.h"
 
+void print_huffman_codes(binary_tree_node_t *node, char *code, int depth);
+
 /**
  * huffman_codes - Generates the Huffman codes for the characters
  *
