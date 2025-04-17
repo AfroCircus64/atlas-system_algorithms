@@ -2,6 +2,8 @@
 # define _GRAPHS_H_
 
 # include <stddef.h>
+#include <limits.h>
+#include <string.h>
 
 /**
  * enum edge_type_e - Enumerates the different types of
