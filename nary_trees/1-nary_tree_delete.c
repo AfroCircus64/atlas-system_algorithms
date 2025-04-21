@@ -9,6 +9,24 @@
  */
 void nary_tree_delete(nary_tree_t *tree)
 {
-	/* Code goes here */
-	return (NULL);
+	nary_tree_t *child, *next_child;
+
+	if (!tree)
+	{
+		return;
+	}
+
+	/* Recursively delete all children */
+	child = tree->children;
+
+	while (child)
+	{
+		next_child = child->next;
+		nary_tree_delete(child);
+		child = next_child;
+	}
+
+	/* Free the content and the node itself */
+	free(tree->content);
+	free(tree);
 }
